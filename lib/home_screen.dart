@@ -8,14 +8,22 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Card View'),
+        title: Text('Card View',
+        style: TextStyle(color: Colors.white),),
+        backgroundColor: Colors.red,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16), color: Colors.blueGrey,// <= No more error here :)
+
+            boxShadow: const [
+              BoxShadow(color: Colors.green, spreadRadius: 3),
+            ],
+          ),
           height: 300,
           width: double.infinity,
-          color: Colors.blueGrey,
           child: Column(
             children: [
               Padding(
